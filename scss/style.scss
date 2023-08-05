@@ -1,0 +1,157 @@
+ /*asocoacion con scss de archivos secundarios*/
+@import "extras/variables";    
+@import "html/servicios";
+@import "html/recomendaciones";
+@import "html/nosotros";
+@import "extras/mixin.scss";
+@import "extras/extend.scss";
+
+*{ 
+    margin:0;		
+    padding:0;		
+    box-sizing:border-box;		
+}
+
+  
+header {
+   
+	nav{
+	    margin-top: 0%;
+	    border: 2px solid rgb(12, 12, 12);
+		ul{
+		    li{
+		        background-color:$color-footer;		
+                display:flex;		
+		        }
+		    }
+        .container-fluid{
+            background-color: $color-footer;
+            }    
+	    }
+
+    }   
+	/*uso de extend en a*/	
+a{ 	
+    @extend%estilo-a	
+} 
+
+/* estilos main sass nesting*/
+
+ 
+main {
+    text-align: center;
+text-decoration: none;
+    ;
+    h1 {
+        margin: bottom 5px;		
+        background-color: $color-secundario;		
+        font-size: 40px;		
+        text-align: center;
+        
+        }	
+     p {
+        font-size: 25px;		
+        margin-bottom: 15px;	
+       }	
+    .nro-telefono {
+        
+        font-size: 45px;	
+    }
+    }
+    
+    
+
+
+ /*estilos para pc*/ 
+ @media screen and (min-width:1300px){
+    body {
+        background-color:rgb(81, 162, 230);
+        
+        mapa{
+            display: flex;
+            align-items: end;
+            gap: 15px;
+        }
+               
+        }
+       }
+    
+
+       
+ /*estilos para tablet*/ 
+ @media (min-width:800px) and (max-width:1280px){ 
+    header{
+        nav {
+             display: flex;
+            margin-top: 0%;
+      	    border: 2px solid rgb(20, 20, 20);
+		        
+            .container-fluid{
+                background-color:$color-footer;
+                               }
+
+    /*estilos para tablet y celular en page/amigos crusel de fotos*/
+     main{
+        background-color:rgb(81, 162, 230);
+       
+        }
+                           
+                               
+
+        ul{
+		        li{
+		            background-color:$color-footer;		
+                    display:flex;
+                    flex-wrap: wrap;
+                    width: 70%;
+                    list-style-type: none;
+                    
+		            }
+		         }
+                }
+            }
+    
+    }
+                 
+    
+ 
+
+
+
+/*estilos para celular*/ 
+@media (max-width:800px) {
+    main {
+        background-color:rgb(81, 162, 230);
+       
+        .consejo-dos {
+            list-style: none;
+            display: none;
+            }
+        }
+        }
+    
+
+
+
+   
+
+    /*footer sass nesting y mixin*/
+
+    footer {
+        margin: 3rem;
+        gap: 10px;     
+        .titulofooter {
+                    background-color: $color-footer;
+                    font-size: 30px;
+                    padding: 3rem;           
+                        }
+        ul{
+          @include flex;     
+         }
+        
+    }
+
+    
+
+
+

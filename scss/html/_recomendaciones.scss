@@ -1,0 +1,36 @@
+@import "extras/variables";  
+
+ /* estilo  en pc -*/
+ @media screen and (min-width:1800px)  {
+
+                
+main {
+     text-decoration: none;
+   /* estilos para padre con grid */
+    .recomendacion-contenedor { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 450px 300px;
+        
+                  }
+                  
+      /* animaciones  */
+    .consejo-uno{
+      box-shadow: 0px 15px 55px blue;
+      height: 650px;
+      padding: 15px;
+      }
+    .consejo-dos{
+      box-shadow: 0px 15px 25px blue;
+      height: 650px;
+      padding: 10px
+    }
+    .consejo-tres{
+      box-shadow: 0px 15px 25px blue;
+      height: 650px;
+      padding: 15px;
+     
+      
+    }
+     }
+        }
